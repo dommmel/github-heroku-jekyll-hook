@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    libv8 (3.11.8.17)
+    multi_json (1.7.6)
+    ref (1.0.5)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  execjs
+  therubyracer

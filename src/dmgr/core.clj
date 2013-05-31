@@ -43,8 +43,8 @@
                  (run app-path (str "cd " app " && git clone " (env (str app "_GITHUB_REPO")) " repo")))))
       ;; git push it to heroku
       (do
-        (log "Pushing repo to Heroku")
-        (run app-path (str "cd " app "/repo && git push -f " (env (str app "_HEROKU_REPO")) " master"))
+        (log "Building jekyll and pushing to Heroku")
+        (run app-path (str "cd " app "/repo && bundle install --without=production && bundle exec jekyll build && git add . && git commit -am 'auto-build update' && git push -f " (env (str app "_HEROKU_REPO")) " master"))
         (println "... Finished")))))
 
 (defn valid-key?

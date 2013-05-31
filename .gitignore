@@ -7,3 +7,6 @@
 /checkouts
 /.lein-deps-sum
 /.env
+.DS_Store
+deploy_rsa
+deploy_rsa.pub
