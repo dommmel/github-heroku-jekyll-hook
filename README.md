@@ -12,6 +12,10 @@ First, set a key on this app to secure deploys
 
     $ heroku config:add ACCESS_KEY=supersecret
 
+Next, tell heroku you'll be using multiple buildpacks for this app.
+
+    $ heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+
 Create/Obtain a SSH key to use for fetching/deploying. Add this to your Github app as a deploy key, and to your Heroku account. Even better, create a Heroku account for deployment, and add it as a collaborator.
 
 Configure it in this app.
